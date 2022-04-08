@@ -16,6 +16,9 @@
 		9B4EDFAB27FF96BE002551E3 /* MCSudokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EDFAA27FF96BE002551E3 /* MCSudokuTests.swift */; };
 		9B4EDFB527FF96BE002551E3 /* MCSudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EDFB427FF96BE002551E3 /* MCSudokuUITests.swift */; };
 		9B4EDFB727FF96BE002551E3 /* MCSudokuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EDFB627FF96BE002551E3 /* MCSudokuUITestsLaunchTests.swift */; };
+		9B4EDFC427FF9902002551E3 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EDFC327FF9901002551E3 /* GridView.swift */; };
+		9B4EDFC827FF9DAB002551E3 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4EDFC727FF9DAB002551E3 /* Sudoku.swift */; };
+		9B4EDFCA27FFA9C1002551E3 /* example in Resources */ = {isa = PBXBuildFile; fileRef = 9B4EDFC927FFA9C0002551E3 /* example */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		9B4EDFB027FF96BE002551E3 /* MCSudokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCSudokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4EDFB427FF96BE002551E3 /* MCSudokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSudokuUITests.swift; sourceTree = "<group>"; };
 		9B4EDFB627FF96BE002551E3 /* MCSudokuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCSudokuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B4EDFC327FF9901002551E3 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		9B4EDFC727FF9DAB002551E3 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
+		9B4EDFC927FFA9C0002551E3 /* example */ = {isa = PBXFileReference; lastKnownFileType = text; path = example; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		9B4EDF8827FF96B5002551E3 = {
 			isa = PBXGroup;
 			children = (
+				9B4EDFC927FFA9C0002551E3 /* example */,
 				9B4EDF9327FF96B5002551E3 /* MCSudoku */,
 				9B4EDFA927FF96BE002551E3 /* MCSudokuTests */,
 				9B4EDFB327FF96BE002551E3 /* MCSudokuUITests */,
@@ -98,8 +105,9 @@
 		9B4EDF9327FF96B5002551E3 /* MCSudoku */ = {
 			isa = PBXGroup;
 			children = (
+				9B4EDFC627FF9D8D002551E3 /* Data */,
+				9B4EDFC527FF9B3E002551E3 /* Views */,
 				9B4EDF9427FF96B5002551E3 /* MCSudokuApp.swift */,
-				9B4EDF9627FF96B5002551E3 /* ContentView.swift */,
 				9B4EDF9827FF96BE002551E3 /* Assets.xcassets */,
 				9B4EDF9D27FF96BE002551E3 /* Persistence.swift */,
 				9B4EDF9F27FF96BE002551E3 /* MCSudoku.xcdatamodeld */,
@@ -131,6 +139,23 @@
 				9B4EDFB627FF96BE002551E3 /* MCSudokuUITestsLaunchTests.swift */,
 			);
 			path = MCSudokuUITests;
+			sourceTree = "<group>";
+		};
+		9B4EDFC527FF9B3E002551E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B4EDF9627FF96B5002551E3 /* ContentView.swift */,
+				9B4EDFC327FF9901002551E3 /* GridView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B4EDFC627FF9D8D002551E3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9B4EDFC727FF9DAB002551E3 /* Sudoku.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4EDFCA27FFA9C1002551E3 /* example in Resources */,
 				9B4EDF9C27FF96BE002551E3 /* Preview Assets.xcassets in Resources */,
 				9B4EDF9927FF96BE002551E3 /* Assets.xcassets in Resources */,
 			);
@@ -265,8 +291,10 @@
 			files = (
 				9B4EDFA127FF96BE002551E3 /* MCSudoku.xcdatamodeld in Sources */,
 				9B4EDF9E27FF96BE002551E3 /* Persistence.swift in Sources */,
+				9B4EDFC827FF9DAB002551E3 /* Sudoku.swift in Sources */,
 				9B4EDF9727FF96B5002551E3 /* ContentView.swift in Sources */,
 				9B4EDF9527FF96B5002551E3 /* MCSudokuApp.swift in Sources */,
+				9B4EDFC427FF9902002551E3 /* GridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
