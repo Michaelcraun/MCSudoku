@@ -41,12 +41,12 @@ class MCSudokuTests: XCTestCase {
              [8,3,1,0,0,0,0,0,0],
              [0,9,6,0,0,0,3,0,0],
              [0,0,0,0,0,0,0,6,0]]
-        )
+        )!
     }
     
     func testNewBoard() {
         let expected = "000|000|000\n000|000|000\n000|000|000\n---+---+---\n000|000|000\n000|000|000\n000|000|000\n---+---+---\n000|000|000\n000|000|000\n000|000|000\n"
-        let newBoard = Board.blank()
+        let newBoard = Board()
         XCTAssertEqual(newBoard.prettyPrinted(), expected)
     }
     
@@ -55,7 +55,7 @@ class MCSudokuTests: XCTestCase {
     }
     
     func testSolution() {
-        let expected = "273|940|510\n000|850|093\n905|210|406\n---+---+---\n007|409|050\n409|081|630\n608|000|009\n---+---+---\n831|000|000\n096|000|300\n000|000|060\n"
+        let expected = "273|946|518\n164|857|293\n985|213|476\n---+---+---\n317|469|852\n429|581|637\n658|372|149\n---+---+---\n831|694|725\n796|125|384\n542|738|961\n"
         XCTAssertEqual(testBoard.solution()?.prettyPrinted(), expected)
     }
     
@@ -63,23 +63,26 @@ class MCSudokuTests: XCTestCase {
         XCTAssertEqual(testBoard.possibilitiesAt(location: Location(0,4)), [4,6])
     }
     
-    func testGeneration() {
-        let easyBoard = Sudoku.shared.setNewBoard()
-        let trivialBoard = Sudoku.shared.setNewBoard(difficulty: .trivial)
-        let mediumBoard = Sudoku.shared.setNewBoard(difficulty: .medium)
-        let hardBoard = Sudoku.shared.setNewBoard(difficulty: .hard)
-        
-        XCTAssertTrue(easyBoard.isSolvlable())
-        XCTAssertEqual(easyBoard.locationsOf(number: 0).count, 15)
-        
+    func testTrivialGeneration() {
+        let trivialBoard = Board(difficulty: .trivial)
         XCTAssertTrue(trivialBoard.isSolvlable())
         XCTAssertEqual(trivialBoard.locationsOf(number: 0).count, 10)
-        
-        print(mediumBoard.prettyPrinted())
-        
+    }
+    
+    func testEasyGeneration() {
+        let easyBoard = Board(difficulty: .easy)
+        XCTAssertTrue(easyBoard.isSolvlable())
+        XCTAssertEqual(easyBoard.locationsOf(number: 0).count, 15)
+    }
+    
+    func testMediumGeneration() {
+        let mediumBoard = Board(difficulty: .medium)
         XCTAssertTrue(mediumBoard.isSolvlable())
         XCTAssertEqual(mediumBoard.locationsOf(number: 0).count, 20)
-        
+    }
+    
+    func testHardGeneration() {
+        let hardBoard = Board(difficulty: .hard)
         XCTAssertTrue(hardBoard.isSolvlable())
         XCTAssertEqual(hardBoard.locationsOf(number: 0).count, 30)
     }

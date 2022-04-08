@@ -13,12 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            ZStack {
-                // Pen view
-                GridView()
-                // Pencil View
-                GridView()
-            }
+            GridView(board: Board(difficulty: .trivial))
         }
     }
 }
