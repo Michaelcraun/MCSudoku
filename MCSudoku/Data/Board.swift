@@ -9,9 +9,7 @@ import Foundation
 
 class Board: ObservableObject {
     var difficulty: Difficulty = .easy
-    var rows: [[Int]] = []
-    var userInput: [[Int]] = []
-    var userNotes: [[Int]] = []
+    var rows: [Location] = []
     
     /// An initialier for creating a completely blank sudoku board. Will mostly be used for creating custom boards.
     init() {
@@ -37,32 +35,39 @@ class Board: ObservableObject {
                 guard num < 10 && num > 0 else { return nil }
             }
         }
+        
         self.difficulty = .custom
-        self.rows = rows
+        for rowNum in 0..<rows.count {
+            let row = rows[rowNum]
+            for columnNum in 0..<row.count {
+                let location = Location(rowNum, columnNum)
+                location.number = row[columnNum]
+                self.rows.append(location)
+            }
+        }
     }
     
     func numberAt(location: Location) -> Int {
-        rows[location.row][location.column]
+        rows[location].number
     }
     
     func set(number: Int, at location: Location) {
-        rows[location.row][location.column] = number
+        rows[location].number = number
     }
 }
 
 extension Board {
     /// A helper funciton to easily create a completely blank puzzle board. This function creates a two-dimensional
     /// array of Int values that has 9 arrays of 9 0 Int values.
-    static func emptyRows() -> [[Int]] {
-        var rows: [[Int]] = []
-        for _ in 0..<Sudoku.shared.limit {
-            var row: [Int] = []
-            for _ in 0..<Sudoku.shared.limit {
-                row.append(0)
+    static func emptyRows() -> [Location] {
+        var locations: [Location] = []
+        for row in 0..<Sudoku.shared.limit {
+            for column in 0..<Sudoku.shared.limit {
+                let location = Location(row, column)
+                locations.append(location)
             }
-            rows.append(row)
         }
-        return rows
+        return locations
     }
 }
 

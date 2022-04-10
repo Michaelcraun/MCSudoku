@@ -25,6 +25,7 @@
 		9B69DE3828010F0000265D44 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69DE3728010F0000265D44 /* ControlView.swift */; };
 		9B69DE3A280110B000265D44 /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69DE39280110B000265D44 /* ControlButton.swift */; };
 		9B86626028031ADB00A77583 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B86625F28031ADB00A77583 /* Pattern.swift */; };
+		9B92DB0528032AF0007EF429 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB0428032AF0007EF429 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		9B69DE3728010F0000265D44 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		9B69DE39280110B000265D44 /* ControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
 		9B86625F28031ADB00A77583 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		9B92DB0428032AF0007EF429 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				9B69DE352800CAEB00265D44 /* Difficulty.swift */,
 				9B69DE332800CACD00265D44 /* Board.swift */,
 				9B86625F28031ADB00A77583 /* Pattern.swift */,
+				9B92DB0428032AF0007EF429 /* Location.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				9B4EDFC827FF9DAB002551E3 /* Sudoku.swift in Sources */,
 				9B4EDF9727FF96B5002551E3 /* ContentView.swift in Sources */,
 				9B69DE3828010F0000265D44 /* ControlView.swift in Sources */,
+				9B92DB0528032AF0007EF429 /* Location.swift in Sources */,
 				9B86626028031ADB00A77583 /* Pattern.swift in Sources */,
 				9B4EDF9527FF96B5002551E3 /* MCSudokuApp.swift in Sources */,
 				9B69DE362800CAEB00265D44 /* Difficulty.swift in Sources */,
