@@ -28,11 +28,20 @@ class Board: ObservableObject {
     /// an two-dimensional array of Int values that contains 9 sets of integers. In addition, each row must have 9
     /// values and each value contained must be between 1 and 9 inclusive. Otherwise, this initializer will fail.
     init?(_ rows: [[Int]]) {
-        guard rows.count == 9 else { return nil }
+        guard rows.count == 9 else {
+            print("MCSudoku Board \(#function): could not find 9 rows!")
+            return nil
+        }
         for row in rows {
-            guard row.count == 9 else { return nil }
+            guard row.count == 9 else {
+                print("MCSudoku Board \(#function): row does not have 9 elements!")
+                return nil
+            }
             for num in row {
-                guard num < 10 && num > 0 else { return nil }
+                guard num < 10 && num >= 0 else {
+                    print("MCSudoku Board \(#function): element is out of bounds [\(num)]!")
+                    return nil
+                }
             }
         }
         
@@ -78,6 +87,7 @@ extension Board {
             for column in 0..<Sudoku.shared.limit {
                 let location = Location(row, column)
                 if possibilitiesAt(location: location).count == 1 {
+                    location.number = possibilitiesAt(location: location).first ?? 0
                     locations.append(location)
                 }
             }
@@ -85,10 +95,46 @@ extension Board {
         return locations
     }
     
-    func checkForPatterns() -> Pattern? {
+    func checkForPatterns() -> [Pattern] {
         
         
-        return nil
+        return []
+    }
+    
+    func checkForXWings() -> [Pattern] {
+        
+        
+        return []
+    }
+    
+    func checkForYWings() -> [Pattern] {
+        
+        
+        return []
+    }
+    
+    func checkForSwordfishes() -> [Pattern] {
+        
+        
+        return []
+    }
+    
+    func checkForForcingChains() -> [Pattern] {
+        
+        
+        return []
+    }
+    
+    func checkForXYWings() -> [Pattern] {
+        
+        
+        return []
+    }
+    
+    func checkForUniqueRectangles() -> [Pattern] {
+        
+        
+        return []
     }
     
     func bruteForceNext() -> (Location, Int)? {

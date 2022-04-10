@@ -26,6 +26,12 @@
 		9B69DE3A280110B000265D44 /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B69DE39280110B000265D44 /* ControlButton.swift */; };
 		9B86626028031ADB00A77583 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B86625F28031ADB00A77583 /* Pattern.swift */; };
 		9B92DB0528032AF0007EF429 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB0428032AF0007EF429 /* Location.swift */; };
+		9B92DB08280330AD007EF429 /* XWingPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB07280330AD007EF429 /* XWingPattern.swift */; };
+		9B92DB0A280330B9007EF429 /* SwordfishPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB09280330B9007EF429 /* SwordfishPattern.swift */; };
+		9B92DB0C280330C6007EF429 /* ForcingChainPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB0B280330C6007EF429 /* ForcingChainPattern.swift */; };
+		9B92DB0E280330D2007EF429 /* XYWingPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB0D280330D2007EF429 /* XYWingPattern.swift */; };
+		9B92DB10280330DC007EF429 /* UniqueRectanlgePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB0F280330DC007EF429 /* UniqueRectanlgePattern.swift */; };
+		9B92DB12280330E5007EF429 /* YWingPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B92DB11280330E5007EF429 /* YWingPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		9B69DE39280110B000265D44 /* ControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
 		9B86625F28031ADB00A77583 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		9B92DB0428032AF0007EF429 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9B92DB07280330AD007EF429 /* XWingPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWingPattern.swift; sourceTree = "<group>"; };
+		9B92DB09280330B9007EF429 /* SwordfishPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwordfishPattern.swift; sourceTree = "<group>"; };
+		9B92DB0B280330C6007EF429 /* ForcingChainPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcingChainPattern.swift; sourceTree = "<group>"; };
+		9B92DB0D280330D2007EF429 /* XYWingPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYWingPattern.swift; sourceTree = "<group>"; };
+		9B92DB0F280330DC007EF429 /* UniqueRectanlgePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueRectanlgePattern.swift; sourceTree = "<group>"; };
+		9B92DB11280330E5007EF429 /* YWingPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWingPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,13 +182,27 @@
 		9B4EDFC627FF9D8D002551E3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9B92DB0628032F6F007EF429 /* Patterns */,
 				9B4EDFC727FF9DAB002551E3 /* Sudoku.swift */,
 				9B69DE352800CAEB00265D44 /* Difficulty.swift */,
 				9B69DE332800CACD00265D44 /* Board.swift */,
-				9B86625F28031ADB00A77583 /* Pattern.swift */,
 				9B92DB0428032AF0007EF429 /* Location.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		9B92DB0628032F6F007EF429 /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				9B86625F28031ADB00A77583 /* Pattern.swift */,
+				9B92DB07280330AD007EF429 /* XWingPattern.swift */,
+				9B92DB09280330B9007EF429 /* SwordfishPattern.swift */,
+				9B92DB0B280330C6007EF429 /* ForcingChainPattern.swift */,
+				9B92DB0D280330D2007EF429 /* XYWingPattern.swift */,
+				9B92DB0F280330DC007EF429 /* UniqueRectanlgePattern.swift */,
+				9B92DB11280330E5007EF429 /* YWingPattern.swift */,
+			);
+			path = Patterns;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +338,11 @@
 			files = (
 				9B69DE3A280110B000265D44 /* ControlButton.swift in Sources */,
 				9B4EDFA127FF96BE002551E3 /* MCSudoku.xcdatamodeld in Sources */,
+				9B92DB12280330E5007EF429 /* YWingPattern.swift in Sources */,
+				9B92DB0A280330B9007EF429 /* SwordfishPattern.swift in Sources */,
 				9B4EDF9E27FF96BE002551E3 /* Persistence.swift in Sources */,
 				9B4EDFC827FF9DAB002551E3 /* Sudoku.swift in Sources */,
+				9B92DB08280330AD007EF429 /* XWingPattern.swift in Sources */,
 				9B4EDF9727FF96B5002551E3 /* ContentView.swift in Sources */,
 				9B69DE3828010F0000265D44 /* ControlView.swift in Sources */,
 				9B92DB0528032AF0007EF429 /* Location.swift in Sources */,
@@ -321,7 +350,10 @@
 				9B4EDF9527FF96B5002551E3 /* MCSudokuApp.swift in Sources */,
 				9B69DE362800CAEB00265D44 /* Difficulty.swift in Sources */,
 				9B4EDFC427FF9902002551E3 /* GridView.swift in Sources */,
+				9B92DB0C280330C6007EF429 /* ForcingChainPattern.swift in Sources */,
 				9B69DE342800CACD00265D44 /* Board.swift in Sources */,
+				9B92DB10280330DC007EF429 /* UniqueRectanlgePattern.swift in Sources */,
+				9B92DB0E280330D2007EF429 /* XYWingPattern.swift in Sources */,
 				9B69DE322800C70200265D44 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

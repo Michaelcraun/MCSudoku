@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias LocationSolution = Location
+
 class Location {
     let row: Int
     let column: Int
@@ -22,6 +24,10 @@ class Location {
         let mirrorRow = abs(row - 8)
         let mirrorColumn = abs(column - 8)
         return Location(mirrorRow, mirrorColumn)
+    }
+    
+    func prettyPrinted() -> String {
+        "R\(row + 1)C\(column + 1)"
     }
 }
 

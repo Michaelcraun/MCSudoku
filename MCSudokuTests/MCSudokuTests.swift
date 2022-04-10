@@ -93,7 +93,7 @@ class MCSudokuTests: XCTestCase {
             let column = Int.random(in: 0..<Sudoku.shared.limit)
             let location = Location(row, column)
             let mirrorLocation = location.mirror()
-            print("The mirror pair of \(location) is \(mirrorLocation)")
+            print("The mirror pair of \(location.prettyPrinted()) is \(mirrorLocation.prettyPrinted())")
         }
     }
 }
