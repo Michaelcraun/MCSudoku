@@ -96,4 +96,26 @@ class MCSudokuTests: XCTestCase {
             print("The mirror pair of \(location.prettyPrinted()) is \(mirrorLocation.prettyPrinted())")
         }
     }
+    
+    func testLocationHelpers() {
+        let location = Location(2, 2)
+        let boxLocations = testBoard.rows.locationsInBox(containing: location)
+        let columnLocations = testBoard.rows.locationsInColumn(containing: location)
+        let rowLocations = testBoard.rows.locationsInRow(containing: location)
+        
+        XCTAssertEqual(boxLocations.count, 9)
+        XCTAssertEqual(
+            boxLocations.map { $0.prettyPrinted() },
+            ["R1C1", "R1C2", "R1C3", "R2C1", "R2C2", "R2C3", "R3C1", "R3C2", "R3C3"])
+        
+        XCTAssertEqual(columnLocations.count, 9)
+        XCTAssertEqual(
+            columnLocations.map { $0.prettyPrinted() },
+            ["R1C3", "R2C3", "R3C3", "R4C3", "R5C3", "R6C3", "R7C3", "R8C3", "R9C3"])
+        
+        XCTAssertEqual(rowLocations.count, 9)
+        XCTAssertEqual(
+            rowLocations.map { $0.prettyPrinted() },
+            ["R3C1", "R3C2", "R3C3", "R3C4", "R3C5", "R3C6", "R3C7", "R3C8", "R3C9"])
+    }
 }

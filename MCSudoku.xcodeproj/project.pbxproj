@@ -195,11 +195,11 @@
 			isa = PBXGroup;
 			children = (
 				9B86625F28031ADB00A77583 /* Pattern.swift */,
-				9B92DB07280330AD007EF429 /* XWingPattern.swift */,
-				9B92DB09280330B9007EF429 /* SwordfishPattern.swift */,
 				9B92DB0B280330C6007EF429 /* ForcingChainPattern.swift */,
-				9B92DB0D280330D2007EF429 /* XYWingPattern.swift */,
+				9B92DB09280330B9007EF429 /* SwordfishPattern.swift */,
 				9B92DB0F280330DC007EF429 /* UniqueRectanlgePattern.swift */,
+				9B92DB07280330AD007EF429 /* XWingPattern.swift */,
+				9B92DB0D280330D2007EF429 /* XYWingPattern.swift */,
 				9B92DB11280330E5007EF429 /* YWingPattern.swift */,
 			);
 			path = Patterns;
