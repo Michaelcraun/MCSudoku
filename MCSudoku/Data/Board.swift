@@ -67,13 +67,49 @@ extension Board {
 }
 
 extension Board {
+    func checkForNakedSingles() -> [Location] {
+        var locations: [Location] = []
+        for row in 0..<Sudoku.shared.limit {
+            for column in 0..<Sudoku.shared.limit {
+                let location = Location(row, column)
+                if possibilitiesAt(location: location).count == 1 {
+                    locations.append(location)
+                }
+            }
+        }
+        return locations
+    }
+    
+    func checkForPatterns() -> Pattern? {
+        
+        
+        return nil
+    }
+    
+    func bruteForceNext() -> (Location, Int)? {
+        for row in 0..<Sudoku.shared.limit {
+            for column in 0..<Sudoku.shared.limit {
+                let location = Location(row, column)
+                if numberAt(location: location) == 0 {
+                    for num in 1...9 {
+                        if number(num, isValidToPlaceAtLocation: location) {
+                            return (location, num)
+                        }
+                    }
+                }
+            }
+        }
+        
+        return nil
+    }
+    
     func isSolvlable() -> Bool {
         for row in 0..<Sudoku.shared.limit {
             for column in 0..<Sudoku.shared.limit {
                 let location = Location(row, column)
                 if numberAt(location: location) == 0 {
                     for num in 0...9 {
-                        if number(num, isValidToPlaceAtLocation: (row, column)) {
+                        if number(num, isValidToPlaceAtLocation: Location(row, column)) {
                             set(number: num, at: location)
                             
                             if isSolvlable() {
@@ -152,7 +188,12 @@ extension Board {
             let location = Location(row, column)
             if numberAt(location: location) != 0 {
                 set(number: 0, at: location)
-                locationsRemoved.append(Location(row,column))
+                locationsRemoved.append(location)
+                
+                // Also remove mirror pair
+                let mirror = location.mirror()
+                set(number: 0, at: mirror)
+                locationsRemoved.append(mirror)
             }
         } while (locationsRemoved.count < difficulty.cellsToClear)
     }

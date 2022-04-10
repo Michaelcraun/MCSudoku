@@ -13,7 +13,10 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            GridView(board: Board(difficulty: .trivial))
+            VStack {
+                GridView(board: Board(difficulty: .trivial))
+                ControlView()
+            }
         }
     }
 }

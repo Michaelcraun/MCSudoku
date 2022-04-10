@@ -19,11 +19,11 @@ enum Difficulty {
     var cellsToClear: Int {
         switch self {
         case .custom: return 0
-        case .easy: return 30
+        case .easy: return 40
         case .hard: return 60
         case .medium: return 50
         case .none: return 0
-        case .trivial: return 20
+        case .trivial: return 30
         }
     }
 }

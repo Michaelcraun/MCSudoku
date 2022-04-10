@@ -86,4 +86,14 @@ class MCSudokuTests: XCTestCase {
         XCTAssertTrue(hardBoard.isSolvlable())
         XCTAssertEqual(hardBoard.locationsOf(number: 0).count, 30)
     }
+    
+    func testMirrorPairs() {
+        for _ in 0..<20 {
+            let row = Int.random(in: 0..<Sudoku.shared.limit)
+            let column = Int.random(in: 0..<Sudoku.shared.limit)
+            let location = Location(row, column)
+            let mirrorLocation = location.mirror()
+            print("The mirror pair of \(location) is \(mirrorLocation)")
+        }
+    }
 }
